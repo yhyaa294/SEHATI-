@@ -1,5 +1,6 @@
 "use client";
 
+// Fixed syntax error
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from "@/components/Navbar";
