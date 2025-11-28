@@ -169,7 +169,7 @@ Connect: [Instagram @syarfddn_yhya](https://www.instagram.com/syarfddn_yhya)
 | :--- | :--- | :--- |
 | **Top 5 Duta GenRe 2025** | **Rozzaq Wahid** <br> *(Ketua OSIS SMANERO 2025)* | [![IG](https://img.shields.io/badge/IG-@rozzaqwahid-E4405F)](https://www.instagram.com/rozzaqwahid) |
 | **Finalis Duta GenRe 2025** | **Salvia Nathaniela Oriana** <br> *(Duta Anak Bidang Desa Jombang 2024)* | [![IG](https://img.shields.io/badge/IG-@salvianthniela-E4405F)](https://www.instagram.com/salvianthniela) |
-| **Product Manager** | **M. Saiful Amruhu** <br> *(Duta Anak Partisipasi Jombang 2025, Juara 2 Duta Anti Narkoba Kec. Ngoro)* | [![IG](https://img.shields.io/badge/IG-@pulamruh-E4405F)](https://www.instagram.com/pulamruh) |
+| **Product Manager** | **M. Saiful Amruhu** <br> *(Duta Anak Partisipasi Jombang 2024, Juara 2 Duta Anti Narkoba Kec. Ngoro 2025)* | [![IG](https://img.shields.io/badge/IG-@pulamruh-E4405F)](https://www.instagram.com/pulamruh) |
 
 ### Mitra Resmi
 * **SMAN Negeri Ngoro Jombang** ([Website](https://smanegeringoro.sch.id/))
