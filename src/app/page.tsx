@@ -96,6 +96,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services / Business Section */}
+      <section className="py-20 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2">
+                 <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-green-100">
+                    <Zap className="h-4 w-4" />
+                    Program Sekolah Sehati
+                 </div>
+                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                   Bawa Perubahan Positif ke Sekolahmu.
+                 </h2>
+                 <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                   Kami tidak hanya menyediakan aplikasi. Tim Duta GenRe SEHATI+ siap datang ke sekolahmu untuk memberikan <strong>Workshop Kesehatan Mental & Sosialisasi Anti-Bullying</strong> yang seru dan interaktif.
+                 </p>
+                 
+                 <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-3">
+                       <div className="bg-green-100 p-2 rounded-full text-green-600"><ShieldCheck className="h-5 w-5" /></div>
+                       <span className="text-slate-700 font-medium">Sosialisasi GenRe & Kesehatan Remaja</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                       <div className="bg-green-100 p-2 rounded-full text-green-600"><Users className="h-5 w-5" /></div>
+                       <span className="text-slate-700 font-medium">Demo Aplikasi SEHATI+ untuk Siswa</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                       <div className="bg-green-100 p-2 rounded-full text-green-600"><Heart className="h-5 w-5" /></div>
+                       <span className="text-slate-700 font-medium">Sesi Konseling Kelompok Terbimbing</span>
+                    </div>
+                 </div>
+
+                 <a 
+                   href="https://wa.me/6281234567890?text=Halo%20Tim%20SEHATI+,%20saya%20tertarik%20mengundang%20kalian%20untuk%20mengisi%20materi%20di%20sekolah..." 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                 >
+                   Undang Kami ke Sekolahmu
+                   <ArrowRight className="ml-2 h-5 w-5" />
+                 </a>
+              </div>
+              
+              <div className="md:w-1/2 relative">
+                 <div className="absolute inset-0 bg-gradient-to-tr from-green-100 to-blue-50 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
+                 <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-bl-full -mr-10 -mt-10"></div>
+                    <div className="relative z-10 text-center py-12">
+                       <Users className="h-24 w-24 text-green-500 mx-auto mb-6 opacity-80" />
+                       <h3 className="text-2xl font-bold text-slate-900 mb-2">Sudah 10+ Sekolah</h3>
+                       <p className="text-slate-500">Telah berkolaborasi menciptakan lingkungan sekolah yang lebih sehat mental.</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

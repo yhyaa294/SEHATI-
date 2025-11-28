@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
+import { Heart, Coffee } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-slate-600 leading-relaxed mb-6 max-w-sm">
               Sistem Ekosistem Hati & Intelegensi. Platform kesehatan mental sahabat remaja Indonesia.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-6">
                 {/* Logos */}
                 <img 
                  src="/logo%20nero.jpg" 
@@ -36,6 +36,16 @@ export default function Footer() {
                  className="h-12 w-auto grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100"
                />
             </div>
+            
+            <a 
+              href="https://saweria.co" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 px-4 py-2 rounded-full text-sm font-bold hover:bg-yellow-100 transition-colors border border-yellow-200"
+            >
+              <Coffee className="h-4 w-4" />
+              Dukung Pengembang (Saweria)
+            </a>
           </div>
           
           <div>
