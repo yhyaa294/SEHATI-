@@ -19,8 +19,8 @@ export default function Home() {
             <div className="bg-white/80 backdrop-blur-xl border border-white/60 rounded-2xl md:rounded-3xl p-5 md:p-6 shadow-2xl shadow-blue-900/5 flex flex-col sm:flex-row items-center justify-between gap-6 ring-1 ring-slate-200/50">
                 <div className="flex items-center gap-4 w-full sm:w-auto justify-center sm:justify-start">
                     <div className="relative flex-shrink-0">
-                        <span className="absolute inset-0 rounded-full bg-rose-400/30 animate-ping"></span>
-                        <div className="bg-gradient-to-br from-rose-500 to-pink-600 p-3 rounded-full text-white relative shadow-lg shadow-rose-500/30">
+                        <span className="absolute inset-0 rounded-full bg-red-400/30 animate-ping"></span>
+                        <div className="bg-gradient-to-br from-red-500 to-orange-600 p-3 rounded-full text-white relative shadow-lg shadow-red-500/30">
                             <Heart className="w-6 h-6" />
                         </div>
                     </div>
@@ -74,7 +74,7 @@ export default function Home() {
                 </div>
                 {/* Card 3 */}
                 <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 group">
-                    <div className="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
                         <MessageCircle className="w-7 h-7" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">Rasa Malu</h3>
@@ -111,8 +111,8 @@ export default function Home() {
                 </div>
 
                 {/* Feature 2: Panic Button */}
-                <div className="bg-rose-50 rounded-[2rem] md:rounded-[2.5rem] p-8 border border-rose-100 hover:shadow-lg transition-all duration-300">
-                    <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 mb-4">
+                <div className="bg-red-50 rounded-[2rem] md:rounded-[2.5rem] p-8 border border-red-100 hover:shadow-lg transition-all duration-300">
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
                         <MessageCircle className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Panic Button</h3>
@@ -170,19 +170,19 @@ export default function Home() {
             {/* Core Team Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-700 hover:border-slate-600 transition-colors">
-                    <div className="w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold mb-4">R</div>
+                    <div className="w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold mb-4">R</div>
                     <h4 className="font-bold text-lg">Rozzaq Wahid</h4>
                     <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">Core Team</p>
                     <p className="text-slate-300 text-sm">Ketua OSIS SMANERO 2025 & Top 5 Duta GenRe.</p>
                 </div>
                 <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-700 hover:border-slate-600 transition-colors">
-                    <div className="w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold mb-4">S</div>
+                    <div className="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold mb-4">S</div>
                     <h4 className="font-bold text-lg">Salvia Nathaniela</h4>
                     <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">Core Team</p>
                     <p className="text-slate-300 text-sm">Finalis Duta GenRe 2025 & Duta Anak Bidang Desa Jombang 2024.</p>
                 </div>
                 <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-700 hover:border-slate-600 transition-colors">
-                    <div className="w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold mb-4">M</div>
+                    <div className="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">M</div>
                     <h4 className="font-bold text-lg">M. Saiful Amruhu</h4>
                     <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">Product Manager</p>
                     <p className="text-slate-300 text-sm">Duta Anak Partisipasi Jombang 2025 & Juara 2 Duta Anti Narkoba.</p>
