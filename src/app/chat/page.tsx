@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import { useChatAI } from "@/hooks/useChatAI";
-import { Send, Bot, User, MoreVertical, AlertTriangle, MessageCircle, Calendar, UserPlus } from 'lucide-react';
+import { Send, Bot, User, MoreVertical, AlertTriangle, UserPlus } from 'lucide-react';
 
 export default function ChatPage() {
   const { messages, isLoading, sendMessage } = useChatAI();

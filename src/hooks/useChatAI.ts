@@ -86,6 +86,7 @@ export function useChatAI() {
   return {
     messages,
     isLoading,
-    sendMessage
+    sendMessage,
+    personaDescription: PERSONA_SYSTEM_PROMPT.trim(),
   };
 }

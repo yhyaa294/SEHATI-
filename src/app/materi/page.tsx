@@ -4,7 +4,7 @@ import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { modules } from '@/data/modules'; // Reusing existing data
-import { Search, Filter, BookOpen, Clock } from 'lucide-react';
+import { Search, BookOpen, Clock } from 'lucide-react';
 
 export default function MateriPage() {
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Navbar from "@/components/Navbar";
-import { MapPin, Mail, Phone, Trophy, Star, GraduationCap, Target } from 'lucide-react';
+import { MapPin, Mail, Trophy, Star, GraduationCap, Target } from 'lucide-react';
 
 export default function SchoolProfile() {
   return (
@@ -31,7 +31,7 @@ export default function SchoolProfile() {
                     SMA Negeri Ngoro Jombang
                   </h1>
                   <p className="text-lg md:text-xl text-slate-600 italic mb-6 max-w-2xl">
-                    "Mencetak Insan yang Berbudi Luhur dan Intelektual Tinggi."
+                    &ldquo;Mencetak Insan yang Berbudi Luhur dan Intelektual Tinggi.&rdquo;
                   </p>
                   
                   <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start text-sm text-slate-600 font-medium">
@@ -107,7 +107,7 @@ export default function SchoolProfile() {
                      <div className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-3">Religius</div>
                      <h3 className="font-bold text-xl text-text-main mb-2">Program Tahfidz Nero</h3>
                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                       Program unggulan menghafal Al-Qur'an bagi siswa-siswi, mencetak generasi yang cerdas intelektual dan spiritual.
+                       Program unggulan menghafal Al-Qur&rsquo;an bagi siswa-siswi, mencetak generasi yang cerdas intelektual dan spiritual.
                      </p>
                      <button className="text-primary font-semibold text-sm hover:underline">Selengkapnya &rarr;</button>
                   </div>

@@ -70,7 +70,7 @@ export default function CounselorDashboard() {
           
           <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white shadow-lg">
             <h4 className="font-bold text-lg mb-2">Tips Konselor</h4>
-            <p className="text-sm opacity-90 mb-4">"Jadilah pendengar yang baik sebelum memberikan saran."</p>
+            <p className="text-sm opacity-90 mb-4">&ldquo;Jadilah pendengar yang baik sebelum memberikan saran.&rdquo;</p>
             <button className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg text-sm font-medium transition-colors w-full">
               Lihat Panduan
             </button>

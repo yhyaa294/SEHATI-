@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function MoodTracker() {
   const [selectedMood, setSelectedMood] = useState<string | null>(null);
@@ -60,7 +60,7 @@ export default function MoodTracker() {
           {/* Simple Toast / Notification Area inside the card */}
           {showQuote && (
              <div className="mt-8 p-4 bg-blue-50 text-primary rounded-xl animate-fade-in-up">
-               <p className="font-semibold text-lg">"{quote}"</p>
+               <p className="font-semibold text-lg">&ldquo;{quote}&rdquo;</p>
              </div>
           )}
         </div>

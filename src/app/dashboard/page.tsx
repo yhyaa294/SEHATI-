@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { MessageCircle, BookOpen, Bot, Sparkles, ArrowRight, HeartHandshake, ShoppingBag, ExternalLink } from 'lucide-react';
+import { MessageCircle, BookOpen, Bot, Sparkles, ArrowRight, ShoppingBag, ExternalLink } from 'lucide-react';
 
 export default function DashboardPage() {
   const [user, setUser] = useState('Sobat SEHATI');
@@ -149,7 +149,7 @@ export default function DashboardPage() {
                         <Sparkles className="h-4 w-4" /> Daily Quote
                     </div>
                     <h3 className="text-lg font-serif italic leading-relaxed opacity-90">
-                      "Matahari tetap bersinar meski tertutup awan."
+                      &ldquo;Matahari tetap bersinar meski tertutup awan.&rdquo;
                     </h3>
                   </div>
               </div>
