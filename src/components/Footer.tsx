@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Coffee, ExternalLink, Scale, Shield, Globe, Instagram } from 'lucide-react';
+import { Heart, Coffee, Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -38,9 +39,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-slate-900 mb-6">Akses Cepat</h4>
             <ul className="space-y-4 text-sm text-slate-600">
-              <li><a href="/" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Beranda</a></li>
-              <li><a href="/login" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Konsultasi AI</a></li>
-              <li><a href="/materi" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Pojok Materi</a></li>
+              <li><Link href="/" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Beranda</Link></li>
+              <li><Link href="/login" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Konsultasi AI</Link></li>
+              <li><Link href="/materi" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Pojok Materi</Link></li>
             </ul>
           </div>
 

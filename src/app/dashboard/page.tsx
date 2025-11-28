@@ -7,10 +7,17 @@ import Link from "next/link";
 import { supabase } from '@/lib/supabase';
 import { MessageCircle, BookOpen, Bot, Sparkles, ArrowRight, ShoppingBag, ExternalLink, Activity } from 'lucide-react';
 
+interface MoodLog {
+    student_email: string;
+    mood: string;
+    note?: string;
+    created_at: string;
+}
+
 export default function DashboardPage() {
   const [user, setUser] = useState('Sobat SEHATI');
   const [moodLoading, setMoodLoading] = useState(false);
-  const [moodHistory, setMoodHistory] = useState<any[]>([]); // For Counselor View
+  const [moodHistory, setMoodHistory] = useState<MoodLog[]>([]); // For Counselor View
   const [showCounselorView, setShowCounselorView] = useState(false);
 
   useEffect(() => {
@@ -26,7 +33,7 @@ export default function DashboardPage() {
   }, []);
 
   const fetchMoodLogs = async () => {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from('mood_logs')
         .select('*')
         .order('created_at', { ascending: false })

@@ -3,8 +3,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Heart, Users, Zap, CheckCircle, MessageCircle, ChevronDown, Phone } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Users, Zap, MessageCircle, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { Heart } from 'lucide-react';
 
 export default function Home() {
   return (
