@@ -1,84 +1,69 @@
 import React from 'react';
-import { Heart, Coffee, Instagram } from 'lucide-react';
+import { Heart, Globe, Instagram, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-slate-100 pt-16 pb-8">
+    <footer className="bg-white border-t border-slate-100 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           
-          {/* Col 1: Brand & Description */}
+          {/* Left: Brand & Tagline */}
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="bg-rose-50 p-2 rounded-full border border-rose-100">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="bg-rose-50 p-2.5 rounded-xl border border-rose-100">
                 <Heart className="h-6 w-6 text-rose-500 fill-rose-500" />
               </div>
-              <span className="font-bold text-xl tracking-tight text-slate-900">
+              <span className="font-bold text-2xl tracking-tight text-slate-900">
                 SEHATI<span className="text-rose-500">+</span>
               </span>
             </div>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              Platform kesehatan mental sahabat remaja Indonesia. Tempat ternyaman untuk bercerita dan bertumbuh bersama.
+            <p className="text-slate-600 leading-relaxed mb-8 max-w-xs">
+              Ruang aman untuk setiap cerita. Karena kesehatan mentalmu adalah prioritas utama kami.
             </p>
-            <div className="flex items-center gap-3 mb-6">
-               {/* Instagram Promo */}
-               <a
-                href="https://www.instagram.com/syarfddn_yhya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold hover:shadow-lg transition-all"
-              >
-                <Instagram className="h-3 w-3" />
-                Follow @syarfddn_yhya
-              </a>
+            <div className="flex items-center gap-4">
+               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors">
+                 <Instagram className="w-5 h-5" />
+               </a>
+               <a href="https://sehati.plus" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-500 transition-colors">
+                 <Globe className="w-5 h-5" />
+               </a>
             </div>
           </div>
           
-          {/* Col 2: Quick Links */}
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6">Akses Cepat</h4>
-            <ul className="space-y-4 text-sm text-slate-600">
-              <li><Link href="/" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Beranda</Link></li>
-              <li><Link href="/login" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Konsultasi AI</Link></li>
-              <li><Link href="/materi" className="hover:text-rose-500 transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-rose-200"></div> Pojok Materi</Link></li>
-            </ul>
+          {/* Middle: Links */}
+          <div className="flex flex-col md:items-center">
+            <div>
+                <h4 className="font-bold text-slate-900 mb-6 text-lg">Navigasi</h4>
+                <ul className="space-y-4 text-slate-600">
+                <li><Link href="/" className="hover:text-blue-600 transition-colors">Beranda</Link></li>
+                <li><Link href="/materi" className="hover:text-blue-600 transition-colors">Materi Edukasi</Link></li>
+                <li><Link href="/admin/login" className="hover:text-blue-600 transition-colors">Login Admin</Link></li>
+                </ul>
+            </div>
           </div>
 
-          {/* Col 3: Supported By (BKKBN Focus) */}
+          {/* Right: Supported By */}
           <div>
-             <h4 className="font-bold text-slate-900 mb-6">Didukung Oleh</h4>
-             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center">
+             <h4 className="font-bold text-slate-900 mb-6 text-lg">Didukung Oleh</h4>
+             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 inline-block">
                 <img 
                   src="/logo%20bkkbn.webp" 
                   alt="BKKBN Logo" 
-                  className="h-16 w-auto mx-auto mb-3 hover:scale-105 transition-transform" 
+                  className="h-12 w-auto hover:scale-105 transition-transform opacity-80 hover:opacity-100" 
                 />
-                <p className="text-xs text-slate-500 font-medium">
-                  Badan Kependudukan dan Keluarga Berencana Nasional
-                </p>
              </div>
-             <div className="mt-6">
-                <a 
-                  href="https://saweria.co" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-yellow-400/10 text-yellow-700 px-4 py-3 rounded-xl text-sm font-bold hover:bg-yellow-400/20 transition-colors border border-yellow-400/20"
-                >
-                  <Coffee className="h-4 w-4" />
-                  Traktir Kopi (Saweria)
-                </a>
+             <div className="mt-6 flex items-start gap-3 text-sm text-slate-500">
+                <MapPin className="w-5 h-5 text-slate-400 mt-0.5 shrink-0" />
+                <p>SMAN Negeri Ngoro<br/>Jombang, Jawa Timur</p>
              </div>
           </div>
 
         </div>
         
         {/* Bottom Copyright */}
-        <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p className="text-slate-500 font-medium">&copy; {new Date().getFullYear()} SEHATI+ Project.</p>
-          <p className="text-slate-400 flex items-center gap-1 text-xs">
-            Made with <Heart className="h-3 w-3 text-rose-500 fill-rose-500" /> by <a href="https://www.instagram.com/syarfddn_yhya" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-600 hover:text-rose-500 transition-colors">Yahya</a>
-          </p>
+        <div className="border-t border-slate-100 pt-8 text-center text-slate-400 text-sm">
+          <p>&copy; 2025 SMAN Ngoro Jombang. All rights reserved.</p>
         </div>
       </div>
     </footer>
