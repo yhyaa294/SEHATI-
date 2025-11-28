@@ -13,7 +13,7 @@
 **Proyek Inovasi Unggulan [SMAN Negeri Ngoro Jombang](https://smanegeringoro.sch.id/)**
 *Didukung Penuh oleh PIK-R PILAR & BKKBN Jombang*
 
-[🌐 Kunjungi Website](https://sehatipluss.vercel.app) · [📷 Instagram Developer](https://www.instagram.com/syarfddn_yhya) · [🐛 Laporkan Isu](https://github.com/yhyaa294/SEHATI-/issues)
+[🌐 Live Demo](https://sehatipluss.vercel.app) · [📷 Instagram Developer](https://www.instagram.com/syarfddn_yhya) · [🐛 Laporkan Isu](https://github.com/yhyaa294/SEHATI-/issues)
 
 </div>
 
@@ -71,7 +71,10 @@ Dashboard interaktif bagi siswa untuk merekam *Daily Mood*.
 * Membantu siswa mengenali pola emosi mereka sendiri.
 * Memberikan data agregat (anonim) bagi sekolah untuk memetakan "kesehatan mental" satu angkatan.
 
-### 4. 🔐 Privacy-First Architecture
+### 4. 📚 Edukasi Interaktif
+Modul "Pojok Materi" yang menyajikan info seputar Triad KRR (Kesehatan Reproduksi, NAPZA, Pernikahan Dini) dengan gaya bahasa remaja.
+
+### 5. 🔐 Privacy-First Architecture
 * Sistem login aman.
 * Opsi penggunaan nama samaran (alias) di dashboard konseling.
 * Data terenkripsi di server Supabase.
@@ -82,11 +85,11 @@ Dashboard interaktif bagi siswa untuk merekam *Daily Mood*.
 
 Projek ini dikembangkan oleh **Yahya (@syarfddn_yhya)**, Top 20 AI Talent Hub Indonesia, sebagai bagian dari ekosistem inovasi digital yang lebih luas:
 
-| **Nama Startup** | **Fungsi** | **Link** |
+| **Nama Startup** | **Deskripsi Singkat** | **Instagram** |
 | :--- | :--- | :--- |
-| **Pasalku.ai** | Asisten Hukum Cerdas berbasis AI untuk masyarakat umum. | [![IG](https://img.shields.io/badge/Instagram-Pasalku.ai-E4405F?logo=instagram)](https://www.instagram.com/pasalku.ai) |
-| **SmartAPD** | Teknologi IoT & AI untuk Keselamatan dan Kesehatan Kerja (K3). | [![IG](https://img.shields.io/badge/Instagram-SmartAPD-E4405F?logo=instagram)](https://www.instagram.com/smartapd) |
-| **UMMIGO** | Chatbot Otomatisasi Customer Service untuk UMKM. | [![IG](https://img.shields.io/badge/Instagram-UMMIGO-E4405F?logo=instagram)](https://www.instagram.com/ummigo) |
+| **Pasalku.ai** | ⚖️ Asisten Hukum Cerdas berbasis AI untuk masyarakat umum. | [![IG](https://img.shields.io/badge/Visit-Pasalku.ai-E4405F?logo=instagram)](https://www.instagram.com/pasalku.ai) |
+| **SmartAPD** | 🛡️ Teknologi IoT & AI untuk Keselamatan Kerja (K3). | [![IG](https://img.shields.io/badge/Visit-SmartAPD-E4405F?logo=instagram)](https://www.instagram.com/smartapd) |
+| **UMMIGO** | 🤖 Chatbot Otomatisasi Customer Service untuk UMKM. | [![IG](https://img.shields.io/badge/Visit-UMMIGO-E4405F?logo=instagram)](https://www.instagram.com/ummigo) |
 
 ---
 
@@ -138,6 +141,8 @@ npm install
 npm run dev
 ```
 
+Akses aplikasi di `http://localhost:3000`.
+
 ---
 
 ## 🗺️ Roadmap Pengembangan
@@ -169,5 +174,5 @@ Connect: [Instagram @syarfddn_yhya](https://www.instagram.com/syarfddn_yhya)
 <div align="center">
   <small>© 2025 SEHATI+ Project. Hak Cipta Dilindungi Undang-Undang.</small>
   <br>
-  <small>Dibuat dengan 💙, ☕, dan Baris Kode.</small>
+  <small>Dibuat dengan 💙, ☕, dan Baris Kode untuk Remaja Indonesia.</small>
 </div>
