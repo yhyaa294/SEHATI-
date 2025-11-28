@@ -1,7 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Heart, Skull, AlertTriangle, Book, Users, ArrowRight, PlayCircle, BookOpen, Star } from 'lucide-react';
 import Link from "next/link";
 
@@ -50,12 +48,11 @@ const MODULES_DATA = [
 
 export default function MateriPage() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
-      <Navbar />
+    <div className="min-h-screen bg-slate-50 flex flex-col font-sans pb-24 md:pb-8">
       
-      <main className="flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="flex-1 pt-10 px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <div className="max-w-7xl mx-auto mb-12">
+          <div className="max-w-7xl mx-auto mb-8 md:mb-12">
             <div className="relative bg-blue-600 rounded-[2.5rem] p-8 md:p-16 overflow-hidden text-white shadow-xl shadow-blue-500/20">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl -ml-16 -mb-16"></div>
@@ -111,7 +108,7 @@ export default function MateriPage() {
                                   {mod.desc}
                               </p>
                               
-                              <Link href="#" className="inline-flex items-center text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                              <Link href={`/materi/${mod.id}`} className="inline-flex items-center text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                                   Baca Materi <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               </Link>
                           </div>
@@ -120,8 +117,6 @@ export default function MateriPage() {
               </div>
           </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

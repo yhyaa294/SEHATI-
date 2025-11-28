@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import { supabase } from '@/lib/supabase';
 import { 
@@ -13,10 +11,6 @@ import {
     ExternalLink, 
     History,
     Activity,
-    Smile,
-    Frown,
-    Meh,
-    Heart,
     Clock
 } from 'lucide-react';
 
@@ -34,12 +28,18 @@ export default function DashboardPage() {
 
   useEffect(() => {
     // 1. Load User Name
-    const storedUser = localStorage.getItem('sehati_user');
-    if (storedUser) {
-        // If it's an email, grab the part before @
-        const name = storedUser.includes('@') ? storedUser.split('@')[0] : storedUser;
-        setUser(name);
-        fetchMoodHistory(storedUser);
+    try {
+      const storedUser = localStorage.getItem('sehati_user');
+      if (storedUser) {
+          const parsed = JSON.parse(storedUser);
+          setUser(parsed.name || 'Sobat Sehati');
+          
+          if (parsed.email) {
+            fetchMoodHistory(parsed.email);
+          }
+      }
+    } catch (e) {
+      console.error("Dashboard User Parse Error", e);
     }
   }, []);
 
@@ -61,26 +61,35 @@ export default function DashboardPage() {
   // 3. Handle Mood Input
   const handleMood = async (mood: string) => {
       setLoading(true);
-      const email = localStorage.getItem('sehati_user') || 'guest@sehati.plus';
+      let email = 'guest@sehati.plus';
+      try {
+        const storedUser = localStorage.getItem('sehati_user');
+        if (storedUser) {
+             const parsed = JSON.parse(storedUser);
+             email = parsed.email || email;
+        }
+      } catch {}
       
       try {
           const { error } = await supabase
             .from('mood_logs')
             .insert([{ student_email: email, mood: mood, note: 'Dashboard Quick Log' }]);
 
-          if (error) throw error;
-
-          // Show Toast (Simple Alert for MVP)
-          alert(`Mood "${mood}" berhasil dicatat! Semangat ya! 💪`);
+          if (error) {
+             // Silent fail for demo if table doesn't exist
+             console.warn("Supabase Mood Log Error (Expected in Demo):", error);
+          } else {
+             // Only alert if success real DB
+             // alert(`Mood "${mood}" berhasil dicatat! Semangat ya! 💪`);
+          }
           
-          // Update UI Optimistically
+          // Update UI Optimistically (Always do this for UX)
           setLastMood(mood);
           const newLog = { id: Date.now(), mood, created_at: new Date().toISOString() };
           setRecentMoods(prev => [newLog, ...prev].slice(0, 3));
 
       } catch (err) {
           console.error(err);
-          alert("Gagal menyimpan mood. Cek koneksi internetmu.");
       } finally {
           setLoading(false);
       }
@@ -98,17 +107,16 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans">
-      <Navbar />
+    <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans pb-24 md:pb-0">
       
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-8 pt-24">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-8 pt-8 md:pt-8">
         
         {/* HEADER */}
-        <header className="mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+        <header className="mb-8 md:mb-10">
+            <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-2">
                 Halo, <span className="text-blue-600">{user}</span>! 👋
             </h1>
-            <p className="text-slate-500 text-lg">Bagaimana kabarmu hari ini? Jangan lupa validasi perasaanmu ya.</p>
+            <p className="text-slate-500 text-sm md:text-lg">Bagaimana kabarmu hari ini? Jangan lupa validasi perasaanmu ya.</p>
         </header>
 
         {/* BENTO GRID LAYOUT */}
@@ -118,16 +126,16 @@ export default function DashboardPage() {
             <div className="md:col-span-2 space-y-6">
                 
                 {/* MOOD TRACKER CARD */}
-                <section className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm relative overflow-hidden">
+                <section className="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-[4rem] -mr-4 -mt-4 -z-0"></div>
                     
                     <div className="relative z-10">
                         <div className="flex items-center justify-between mb-6">
-                            <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+                            <h2 className="text-lg md:text-xl font-bold text-slate-800 flex items-center gap-2">
                                 <Activity className="w-5 h-5 text-blue-500" />
                                 Mood Tracker
                             </h2>
-                            <span className="text-xs font-medium bg-slate-100 px-3 py-1 rounded-full text-slate-500">
+                            <span className="text-[10px] md:text-xs font-medium bg-slate-100 px-3 py-1 rounded-full text-slate-500">
                                 Terakhir: {getEmoji(lastMood)} {lastMood}
                             </span>
                         </div>
@@ -159,7 +167,7 @@ export default function DashboardPage() {
 
                 {/* QUICK ACTIONS */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <Link href="/chat" className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-6 text-white shadow-lg shadow-blue-200 hover:shadow-xl hover:scale-[1.02] transition-all flex flex-col justify-between h-40 group">
+                    <Link href="/chat" className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-6 text-white shadow-lg shadow-blue-200 hover:shadow-xl hover:scale-[1.02] transition-all flex flex-col justify-between h-32 md:h-40 group">
                         <div className="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm">
                             <Bot className="w-6 h-6" />
                         </div>
@@ -169,7 +177,7 @@ export default function DashboardPage() {
                         </div>
                     </Link>
 
-                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-lg hover:border-green-200 hover:scale-[1.02] transition-all flex flex-col justify-between h-40 group">
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-lg hover:border-green-200 hover:scale-[1.02] transition-all flex flex-col justify-between h-32 md:h-40 group">
                         <div className="bg-green-50 w-10 h-10 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-colors">
                             <Phone className="w-5 h-5" />
                         </div>
@@ -179,7 +187,7 @@ export default function DashboardPage() {
                         </div>
                     </a>
 
-                    <Link href="/materi" className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-lg hover:border-yellow-200 hover:scale-[1.02] transition-all flex flex-col justify-between h-40 group">
+                    <Link href="/materi" className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-lg hover:border-yellow-200 hover:scale-[1.02] transition-all flex flex-col justify-between h-32 md:h-40 group">
                         <div className="bg-yellow-50 w-10 h-10 rounded-xl flex items-center justify-center text-yellow-600 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
                             <BookOpen className="w-5 h-5" />
                         </div>
@@ -261,8 +269,6 @@ export default function DashboardPage() {
         </div>
 
       </main>
-      
-      <Footer />
     </div>
   );
 }

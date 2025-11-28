@@ -1,56 +1,17 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import Link from "next/link";
-import { ArrowRight, Shield, Users, Zap, MessageCircle, Heart, BookOpen, Lock, Activity, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { Shield, Users, Zap, MessageCircle, Heart, BookOpen, Lock, Activity, ArrowRight } from 'lucide-react';
 import MysteryLogo from "@/components/MysteryLogo";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <Navbar />
       
-      {/* Hero Section - MOBILE RESPONSIVE FIX APPLIED */}
-      <section className="relative pt-20 pb-20 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/50 via-transparent to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8 border border-blue-100 animate-fade-in-up">
-            <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-            Platform Kesehatan Mental Remaja Pertama di Jombang
-          </div>
-          
-          {/* Responsive Typography */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 md:mb-8 leading-tight">
-            Kesehatan Mentalmu, <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Prioritas Utama Kami.
-            </span>
-          </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
-            Ruang aman untuk bercerita, belajar, dan tumbuh. Didukung oleh AI cerdas dan konselor sebaya yang mengerti kamu. Privasi 100% terjaga.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 md:mb-16 px-4 md:px-0">
-            <Link 
-              href="/login" 
-              className="inline-flex justify-center items-center px-6 md:px-8 py-3 md:py-4 rounded-full bg-primary text-white font-bold text-base md:text-lg shadow-lg hover:bg-primary/90 hover:shadow-primary/30 transition-all transform hover:-translate-y-1 w-full sm:w-auto"
-            >
-              Mulai Perjalananmu
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <a 
-              href="#features" 
-              className="inline-flex justify-center items-center px-6 md:px-8 py-3 md:py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-bold text-base md:text-lg hover:bg-slate-50 transition-all w-full sm:w-auto"
-            >
-              Pelajari Lebih Lanjut
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* REPLACED: New Aurora Hero Component */}
+      <Hero />
 
       {/* SECTION 1: EMERGENCY BAR (Bridge) - MOBILE FIX */}
       <section className="relative z-30 px-4 -mt-10 md:-mt-20 mb-16 md:mb-24">

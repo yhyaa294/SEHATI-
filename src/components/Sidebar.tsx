@@ -13,11 +13,18 @@ export default function Sidebar() {
   const [userName, setUserName] = useState('Sobat Sehati');
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('sehati_user');
-    if (storedUser) {
-      const parsed = JSON.parse(storedUser);
-      setUserRole(parsed.role);
-      setUserName(parsed.name);
+    try {
+      const storedUser = localStorage.getItem('sehati_user');
+      if (storedUser) {
+        const parsed = JSON.parse(storedUser);
+        setUserRole(parsed.role);
+        setUserName(parsed.name);
+      }
+    } catch (error) {
+      console.error("Error parsing user data:", error);
+      // Clear invalid data
+      localStorage.removeItem('sehati_user');
+      localStorage.removeItem('sehati_role');
     }
   }, []);
 

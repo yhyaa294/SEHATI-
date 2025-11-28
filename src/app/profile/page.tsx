@@ -9,12 +9,18 @@ export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('sehati_user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    } else {
-        // Fallback for viewing without login
-        setUser({ name: 'Sobat Sehati', role: 'student', class: 'XI MIPA 3' });
+    try {
+      const storedUser = localStorage.getItem('sehati_user');
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
+      } else {
+          // Fallback for viewing without login
+          setUser({ name: 'Sobat Sehati', role: 'student', class: 'XI MIPA 3' });
+      }
+    } catch (error) {
+      console.error("Profile Error Parsing JSON:", error);
+      localStorage.removeItem('sehati_user');
+      setUser({ name: 'Sobat Sehati', role: 'student', class: 'XI MIPA 3' });
     }
   }, []);
 
