@@ -4,7 +4,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative bg-slate-50 overflow-hidden">
+    <section className="relative bg-slate-50 overflow-hidden min-h-[85vh] flex items-center justify-center py-20">
       
       {/* --- GENRE BKKBN THEME: BLUE & GOLD AURORA --- */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-blue-100 to-white rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Force Centered Layout */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
@@ -56,48 +56,8 @@ export default function Hero() {
                 Pelajari Dulu
               </Link>
             </div>
-
-            <div className="flex items-center justify-center gap-6 pt-4">
-              <div className="flex -space-x-2">
-                {[1,2,3,4].map((i) => (
-                  <div key={i} className="h-10 w-10 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-400 overflow-hidden shadow-sm">
-                    {/* Avatar Placeholder: Blue & Gold Gradient only */}
-                    <div className={`w-full h-full bg-gradient-to-br ${i % 2 === 0 ? 'from-blue-100 to-blue-300' : 'from-yellow-100 to-amber-200'}`}></div>
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm text-slate-600 text-left">
-                <p className="font-bold text-slate-900">1,000+ Siswa</p>
-                <p>Telah bergabung</p>
-              </div>
-            </div>
           </div>
           
-          {/* Glass Card - MOVED BELOW & CENTERED */}
-          <div className="relative z-10 mt-16 w-full max-w-md">
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-200/50 border-[6px] border-white/50 bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-xl min-h-[300px] w-full flex items-center justify-center group transition-transform hover:scale-[1.02] duration-500">
-               {/* Glass Shine */}
-               <div className="absolute inset-0 bg-gradient-to-tr from-white/40 via-transparent to-transparent opacity-50"></div>
-               
-               <div className="relative w-full p-8">
-                 {/* Floating Elements: Blue & Gold Only */}
-                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-bounce-slow"></div>
-                 <div className="absolute top-10 left-0 w-24 h-24 bg-amber-400 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-bounce-slow animation-delay-1000"></div>
-                 
-                 {/* Main Card Content */}
-                 <div className="relative flex flex-col items-center justify-center h-full text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center text-white shadow-lg mb-4">
-                        <ShieldCheck className="h-8 w-8" />
-                    </div>
-                    <h3 className="font-bold text-xl text-slate-900 mb-1">Privasi Terjaga</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed max-w-xs mx-auto">
-                        Cerita kamu 100% rahasia.<br/>Hanya kamu & konselor yang tahu.
-                    </p>
-                 </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
