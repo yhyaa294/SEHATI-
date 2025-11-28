@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="absolute -top-40 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-full blur-3xl opacity-40 mix-blend-multiply animate-blob"></div>
         
         {/* Blob 2: GenRe Gold/Amber (The "Salam GenRe" Spirit) */}
-        <div className="absolute bottom-0 -right-20 w-[600px] h-[600px] bg-gradient-to-bl from-yellow-400 to-amber-500 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-0 -right-20 w-[600px] h-[600px] bg-gradient-to-bl from-amber-400 to-yellow-300 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob animation-delay-2000"></div>
         
         {/* Blob 3: Subtle Light Blue (Neutralizer) */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-blue-100 to-white rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
@@ -21,10 +21,10 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
         
         {/* Force Centered Layout */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           
           {/* Text & Badges - CENTERED */}
-          <div className="space-y-8 z-10 max-w-4xl mx-auto">
+          <div className="space-y-8 z-10 w-full">
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-blue-100 mx-auto">
               <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
               <span className="text-sm font-bold text-blue-800 tracking-wide">Platform Kesehatan Mental Remaja Pertama di Jombang</span>
@@ -32,7 +32,7 @@ export default function Hero() {
             
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
               Kesehatan Mentalmu, <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">
                 Prioritas Utama Kami.
               </span>
             </h1>
@@ -44,7 +44,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/chat" 
-                className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-700 to-blue-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all transform hover:-translate-y-1"
+                className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all transform hover:-translate-y-1"
               >
                 Curhat Sekarang
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -74,8 +74,8 @@ export default function Hero() {
           </div>
           
           {/* Glass Card - MOVED BELOW & CENTERED */}
-          <div className="relative z-10 mt-16">
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-200/50 border-[6px] border-white/50 bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-xl min-h-[300px] w-full max-w-md mx-auto flex items-center justify-center group transition-transform hover:scale-[1.02] duration-500">
+          <div className="relative z-10 mt-16 w-full max-w-md">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-200/50 border-[6px] border-white/50 bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-xl min-h-[300px] w-full flex items-center justify-center group transition-transform hover:scale-[1.02] duration-500">
                {/* Glass Shine */}
                <div className="absolute inset-0 bg-gradient-to-tr from-white/40 via-transparent to-transparent opacity-50"></div>
                
